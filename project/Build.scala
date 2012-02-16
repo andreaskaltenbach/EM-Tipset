@@ -5,17 +5,14 @@ import PlayProject._
 object ApplicationBuild extends Build {
 
     val appName         = "EM-Tipset"
-    val appVersion      = "0.1"
+    val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
       // Add your project dependencies here,
     )
 
-    val main = PlayProject(appName, appVersion, appDependencies).settings(defaultScalaSettings:_*).settings(
-      // Add your own project settings here  
-      //resolvers ++= Seq(
-      //  sbtIdeaRepo
-      //)
+    val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
+      // Add your own project settings here      
     )
 
 }
