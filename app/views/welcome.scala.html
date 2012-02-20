@@ -1,0 +1,38 @@
+@import helper._
+@import controllers.SignupController._
+
+@main("EM Tipset 2012") {
+
+
+Hej!
+
+
+    @helper.form(action = routes.SignupController.login) {
+
+        @inputText(
+            signupForm("name"),
+            '_label -> "Name"
+        )
+
+        @inputText(
+            signupForm("email"),
+            '_label -> "Email"
+        )
+
+        @inputPassword(
+        signupForm("password.main"),
+            '_label -> "Password",
+            '_help -> "A password must be at least 6 characters. "
+        )
+
+        @inputPassword(
+        signupForm("password.confirm"),
+            '_label -> "Repeat password",
+            '_help -> "Please repeat your password again.",
+            '_error -> signupForm.error("password")
+        )
+
+
+}
+
+}

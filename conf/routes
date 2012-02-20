@@ -5,5 +5,9 @@
 # Home page
 GET     /                           controllers.Application.index
 
+GET     /login                      controllers.SignupController.login
+GET     /signup                     controllers.SignupController.form
+GET     /summary                    controllers.SignupController.summary
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
